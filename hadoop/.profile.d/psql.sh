@@ -1,0 +1,2 @@
+# PostgreSQL
+export PGHOST=localhost
