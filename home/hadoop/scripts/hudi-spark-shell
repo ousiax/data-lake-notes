@@ -4,8 +4,9 @@ set -e
 
 # // spark-shell for spark 3.2
 # --packages org.apache.hudi:hudi-spark3_2.12:0.10.1,org.apache.spark:spark-avro_2.12:3.2.1 \
+HUDI_SPARK_BUNDLE="$HOME/github.com/apache/hudi/packaging/hudi-spark-bundle/target/hudi-spark3.1.2-bundle_2.12-0.10.1.jar"
 spark-shell \
-    --jars /home/hadoop/github.com/apache/hudi/packaging/hudi-spark-bundle/target/hudi-spark3.1.2-bundle_2.12-0.10.1.jar \
+    --jars $HUDI_SPARK_BUNDLE \
     --packages org.apache.spark:spark-avro_2.12:3.2.1 \
     --conf 'spark.serializer=org.apache.spark.serializer.KryoSerializer'
 
