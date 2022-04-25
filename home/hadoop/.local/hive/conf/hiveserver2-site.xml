@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+  <property>
+    <name>hive.server2.clear.dangling.scratchdir</name>
+    <value>true</value>
+    <description>Clear dangling scratch dir periodically in HS2</description>
+  </property>
+  <property>
+    <name>hive.server2.enable.doAs</name>
+    <value>false</value>
+    <description>
+      Setting this property to true will have HiveServer2 execute
+      Hive operations as the user making the calls to it.
+    </description>
+  </property>
+
+  <property>
+    <name>hive.server2.transport.mode</name>
+    <value>binary</value>
+    <description>
+      Expects one of [binary, http].
+      Transport mode of HiveServer2.
+    </description>
+  </property>
+
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value/>
+    <description>Bind host on which to run the HiveServer2 Thrift service.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.port</name>
+    <value>10000</value>
+    <description>Port number of HiveServer2 Thrift interface when hive.server2.transport.mode is 'binary'.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.min.worker.threads</name>
+    <value>5</value>
+    <description>Minimum number of Thrift worker threads</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.max.worker.threads</name>
+    <value>50</value>
+  </property>
+
+</configuration>
