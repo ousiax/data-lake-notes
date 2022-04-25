@@ -13,6 +13,30 @@
     <description>Hive metastore listener port.</description>
   </property>
 
+  <!--
+    Set user $hive to be allowed to inpersonate hive on Hadoop,
+    or you can also disble the `hive.metastore.event.db.notification.api.auth` as `false`,
+    otherwise the hiveserver2 would not start.
+  -->
+  <!--
+  <property>
+    <name>hadoop.proxyuser.$hive.hosts</name>
+    <value>*</value>
+  </property>
+  <property>
+    <name>hadoop.proxyuser.$hive.groups</name>
+    <value>*</value>
+  </property>
+  <property>
+    <name>hive.metastore.event.db.notification.api.auth</name>
+    <value>false</value>
+    <description>
+      Should metastore do authorization against database notification related APIs such as get_next_notification.
+      If set to true, then only the superusers in proxy settings have the permission
+    </description>
+  </property>
+  -->
+
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
     <value>jdbc:mysql://node-0:3306/metastore_db</value>
