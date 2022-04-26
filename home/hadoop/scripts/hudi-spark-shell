@@ -8,7 +8,8 @@ HUDI_SPARK_BUNDLE="$HOME/github.com/apache/hudi/packaging/hudi-spark-bundle/targ
 spark-shell \
     --jars $HUDI_SPARK_BUNDLE \
     --packages org.apache.spark:spark-avro_2.12:3.2.1 \
-    --conf 'spark.serializer=org.apache.spark.serializer.KryoSerializer'
+    --conf 'spark.serializer=org.apache.spark.serializer.KryoSerializer' \
+    $@
 
 # // spark-shell for spark 3.1
 # spark-shell \
